@@ -12,7 +12,20 @@ public class Logger {
         return instance;
     }
 
-    public void logMessage(String message) {
-        System.out.println("LOG: " + message);
+    private void log(String severityLevel, String message) {
+        System.out.println("[" + severityLevel + "] " + message);
+    }
+
+    public void info(String message) {
+        log("INFO", message);
+    }
+
+    public void debug(String message) {
+        log("DEBUG", message);
+    }
+
+    public void error(String message) {
+        log("ERROR", message);
     }
 }
+
