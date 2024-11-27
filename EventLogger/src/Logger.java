@@ -17,8 +17,7 @@ public class Logger {
             e.printStackTrace();
         }
     }
-
-    public static Logger getInstance() {
+    public static synchronized Logger getInstance() {
         if (instance == null) {
             System.out.println("Creating Logger instance.");
             instance = new Logger();
@@ -27,13 +26,11 @@ public class Logger {
         return instance;
     }
 
-    private void log(String severityLevel, String message) {
+    public synchronized void log(String severityLevel, String message) {
         String logMessage = "[" + severityLevel + "] " + message;
 
-        // Write to console
         System.out.println(logMessage);
 
-        // Write to file
         try {
             if (fileWriter != null) {
                 fileWriter.write(logMessage);
