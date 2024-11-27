@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14a010ab-387d-4516-b18e-79e4a3b90424" name="Changes" comment="Text Formatter finished, Done half in class and worked on it individually at home" />
+    <list default="true" id="14a010ab-387d-4516-b18e-79e4a3b90424" name="Changes" comment="Implemented User Story 11 by applying  the strategy design pattern and utilizing an interface to handle logging outputs, making the code easily extendable for future additions." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,8 +34,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-21"
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "onboarding.tips.debug.path": "/Users/peterhoang/Downloads/DesignPattern-PH/EventLogger/src/Main.java"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -77,11 +87,167 @@
       <option name="project" value="LOCAL" />
       <updated>1732671216334</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented user story 1 of event logger, by adding a single, thread-safe, and centralized logger instances. Added some instances in Main to test them out as well.">
+      <option name="closed" value="true" />
+      <created>1732673623279</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732673623279</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implemented user story 1 of event logger, by adding a single, thread-safe, and centralized logger instances. Added some instances in Main to test them out as well.">
+      <option name="closed" value="true" />
+      <created>1732673752161</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732673752161</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implemented user story 1 of event logger, by adding a single, and centralized logger instances. Added some instances in Main to test them out as well.">
+      <option name="closed" value="true" />
+      <created>1732673767254</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732673767254</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implemented user story 2 of event logger, where there user can log messages based on different severity levels and print the message.">
+      <option name="closed" value="true" />
+      <created>1732674449741</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732674449741</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implemented user story 3 of event logger, where the user can now save the log messages down and print them out whenever.">
+      <option name="closed" value="true" />
+      <created>1732674785352</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732674785352</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implemented user story 3 of event logger, where the user can now save the log messages down and print them out whenever.">
+      <option name="closed" value="true" />
+      <created>1732674796141</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732674796141</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Made the Main method to write logs to console">
+      <option name="closed" value="true" />
+      <created>1732674994154</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732674994154</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implemented user story 5 that can saves the history log messages into a file called messages.log">
+      <option name="closed" value="true" />
+      <created>1732675385358</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732675385358</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Implemnented user story 6 where making Logger instancce is synchronized to ensure that only one thread can create the Logger instance. This guarantees that the singleton instance is initialized safely, even in a multi-threaded environment.">
+      <option name="closed" value="true" />
+      <created>1732675774771</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732675774771</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Implemnented user story 6 where making Logger instancce is synchronized to ensure that only one thread can create the Logger instance. This guarantees that the singleton instance is initialized safely, even in a multi-threaded environment.">
+      <option name="closed" value="true" />
+      <created>1732675962178</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732675962178</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Implemnented user story 6 where making Logger instancce is synchronized to ensure that only one thread can create the Logger instance. This guarantees that the singleton instance is initialized safely, even in a multi-threaded environment.">
+      <option name="closed" value="true" />
+      <created>1732675969973</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732675969973</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Implemented User Story 7, which enables on-demand archiving of logs using a specified naming convention to differentiate between the log history and archived logs.">
+      <option name="closed" value="true" />
+      <created>1732676156666</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732676156666</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Implemented User Story 8 to provide customization and flexibility in selecting the logger's output destination.">
+      <option name="closed" value="true" />
+      <created>1732677462626</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732677462626</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Implemented User Story 9 to include timestamps in each log entry, formatted as day-month-year hour:minute:second.">
+      <option name="closed" value="true" />
+      <created>1732677613288</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732677613288</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Implemented User Story 9 to include timestamps in each log entry, formatted as day-month-year hour:minute:second.">
+      <option name="closed" value="true" />
+      <created>1732677627874</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732677627874</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Implemented User Story 9 to include timestamps in each log entry, formatted as day-month-year hour:minute:second.">
+      <option name="closed" value="true" />
+      <created>1732677632235</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732677632235</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Implemented User Story 10 by creating a dedicated method to format all log entries before any processing ensuring uniform formatting across all entries.">
+      <option name="closed" value="true" />
+      <created>1732677807229</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732677807229</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Implemented User Story 11 by applying  the strategy design pattern and utilizing an interface to handle logging outputs, making the code easily extendable for future additions.">
+      <option name="closed" value="true" />
+      <created>1732678340120</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732678340120</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Text Formatter finished, Done half in class and worked on it individually at home" />
-    <option name="LAST_COMMIT_MESSAGE" value="Text Formatter finished, Done half in class and worked on it individually at home" />
+    <MESSAGE value="Implemented user story 1 of event logger, by adding a single, thread-safe, and centralized logger instances. Added some instances in Main to test them out as well." />
+    <MESSAGE value="Implemented user story 1 of event logger, by adding a single, and centralized logger instances. Added some instances in Main to test them out as well." />
+    <MESSAGE value="Implemented user story 2 of event logger, where there user can log messages based on different severity levels and print the message." />
+    <MESSAGE value="Implemented user story 3 of event logger, where the user can now save the log messages down and print them out whenever." />
+    <MESSAGE value="Made the Main method to write logs to console" />
+    <MESSAGE value="Implemented user story 5 that can saves the history log messages into a file called messages.log" />
+    <MESSAGE value="Implemnented user story 6 where making Logger instancce is synchronized to ensure that only one thread can create the Logger instance. This guarantees that the singleton instance is initialized safely, even in a multi-threaded environment." />
+    <MESSAGE value="Implemented User Story 7, which enables on-demand archiving of logs using a specified naming convention to differentiate between the log history and archived logs." />
+    <MESSAGE value="Implemented User Story 8 to provide customization and flexibility in selecting the logger's output destination." />
+    <MESSAGE value="Implemented User Story 9 to include timestamps in each log entry, formatted as day-month-year hour:minute:second." />
+    <MESSAGE value="Implemented User Story 10 by creating a dedicated method to format all log entries before any processing ensuring uniform formatting across all entries." />
+    <MESSAGE value="Implemented User Story 11 by applying  the strategy design pattern and utilizing an interface to handle logging outputs, making the code easily extendable for future additions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented User Story 11 by applying  the strategy design pattern and utilizing an interface to handle logging outputs, making the code easily extendable for future additions." />
   </component>
 </project>
