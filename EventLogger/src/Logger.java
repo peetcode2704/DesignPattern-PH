@@ -35,8 +35,8 @@ public class Logger {
     }
 
     public synchronized void log(String severityLevel, String message) {
-        String logMessage = "[" + severityLevel + "] " + message;
-
+        String timestamp = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date());
+        String logMessage = "[" + timestamp + "] [" + severityLevel + "] " + message;
         System.out.println(logMessage);
 
         try {
