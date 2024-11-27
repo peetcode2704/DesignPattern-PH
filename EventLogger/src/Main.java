@@ -14,9 +14,5 @@ public class Main {
             System.out.println(log);
         }
 
-        Logger logger2 = Logger.getInstance();
-        logger2.info("Another info message.");
-
-        System.out.println(logger == logger2);
     }
 }
