@@ -1,3 +1,6 @@
+import java.io.IOException;
+
 public interface LogOutput {
-    void write(String message);
+    void writeLog(String logMessage);
+    void close() throws IOException;
 }
