@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DesignPattern-PH.iml" filepath="$PROJECT_DIR$/DesignPattern-PH.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EventLogger/EventLogger.iml" filepath="$PROJECT_DIR$/EventLogger/EventLogger.iml" />
     </modules>
   </component>
 </project>
