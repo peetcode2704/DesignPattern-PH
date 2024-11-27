@@ -35,8 +35,8 @@ public class Logger {
     }
 
     public synchronized void log(String severityLevel, String message) {
+        String logMessage = formatLogMessage(severityLevel, message);
         String timestamp = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date());
-        String logMessage = "[" + timestamp + "] [" + severityLevel + "] " + message;
         System.out.println(logMessage);
 
         try {
@@ -102,6 +102,12 @@ public class Logger {
     public void setLogDestination(LogDestination logDestination) {
         this.logDestination = logDestination;
     }
+
+    private String formatLogMessage(String level, String message) {
+        String timestamp = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date());
+        return "[" + timestamp + "] [" + level + "] " + message;
+    }
+
 
 
 }
