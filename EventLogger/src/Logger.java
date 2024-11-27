@@ -11,14 +11,19 @@ public class Logger {
     private static Logger instance;
     private List<String> logHistory;
     private BufferedWriter fileWriter;
+    private LogDestination logDestination;
+
 
     private Logger() {
+        this.logDestination = new ConsoleLogDestination();
+
         logHistory = new ArrayList<>();
         try {
             fileWriter = new BufferedWriter(new FileWriter("messages.log", true));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
     public static synchronized Logger getInstance() {
         if (instance == null) {
@@ -86,4 +91,17 @@ public class Logger {
             System.out.println("Error archiving logs: " + e.getMessage());
         }
     }
+
+    public class RemoteServerLogDestination implements LogDestination {
+        @Override
+        public void logMessage(String message) {
+            System.out.println("Sending log to remote server: " + message);  // Simulate sending to a remote server
+        }
+    }
+
+    public void setLogDestination(LogDestination logDestination) {
+        this.logDestination = logDestination;
+    }
+
+
 }
