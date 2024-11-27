@@ -1,8 +1,11 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
+
 
 public class Logger {
     private static Logger instance;
@@ -67,6 +70,20 @@ public class Logger {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void archiveLogs() {
+        String timestamp = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
+        String archiveFileName = "logs_archive_" + timestamp + ".log";
+
+        try (BufferedWriter archiveWriter = new BufferedWriter(new FileWriter(archiveFileName))) {
+            for (String log : logHistory) {
+                archiveWriter.write(log + "\n");
+            }
+            System.out.println("Logs archived to: " + archiveFileName);
+        } catch (IOException e) {
+            System.out.println("Error archiving logs: " + e.getMessage());
         }
     }
 }
